@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pandora:
+    build:
+      context: . 
+      dockerfile: Dockerfile    
+
+    ports:
+      - "8018:8018"  # 
+
+    # 启动容器后，运行main.py主程序
+    command: >
+      bash -c "python3 -u main.py"
